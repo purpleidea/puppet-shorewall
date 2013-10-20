@@ -1,0 +1,10 @@
+###############################################################################
+#ZONE	TYPE		OPTIONS		IN			OUT
+#					OPTIONS			OPTIONS
+<% if comment != '' -%>
+#
+#	<%= comment %>
+#
+<% end -%>
+<%= name %>	<%= valid_type %>	<%= options.sort.join(',') %>
+#LAST LINE - ADD YOUR ENTRIES ABOVE THIS ONE - DO NOT REMOVE

@@ -1,0 +1,23 @@
+This is puppet-shorewall a puppet module for shorewall.
+
+Please read the INSTALL file for instructions on getting this installed.
+Look in the examples/ folder for usage. If none exist, please contribute one!
+This code may be a work in progress. The interfaces may change without notice.
+Patches are welcome, but please be patient. They are best received by email.
+Please ping me if you have big changes in mind, before you write a giant patch.
+
+Module specific notes:
+* This module will take over management of your shorewall configuration.
+* You can either use this module to manage everything, or not use it at all.
+* There is some middle ground, but you have to figure that out by yourself.
+* Despite thos provisos, I do recommend using this to manage shorewall.
+* Shorewall is awesome, and puppet-shorewall makes managing awesome, easier.
+* Thanks to Tom et al. See: http://shorewall.net/shorewall_index.htm#Donations
+
+Dependencies:
+* None
+
+
+Happy hacking,
+James Shubin <james@shubin.ca>, https://ttboj.wordpress.com/
+

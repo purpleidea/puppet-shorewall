@@ -1,0 +1,19 @@
+#
+# Shorewall version 4 - Zones File
+#
+# For information about this file, type "man shorewall-zones"
+#
+# The manpage is also online at
+# http://www.shorewall.net/manpages/shorewall-zones.html
+#
+###############################################################################
+#ZONE	TYPE		OPTIONS		IN			OUT
+#					OPTIONS			OPTIONS
+
+# XXX: include this part if any shorewall::zone() defines are used
+#
+#	Include any zones in zones.d/ Don't let this return false.
+#
+SHELL cat /etc/shorewall/zones.d/*.zone 2> /dev/null || true
+
+#LAST LINE - ADD YOUR ENTRIES ABOVE THIS ONE - DO NOT REMOVE

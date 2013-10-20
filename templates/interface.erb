@@ -1,0 +1,9 @@
+###############################################################################
+#ZONE	INTERFACE	BROADCAST	OPTIONS
+<% if comment != '' -%>
+#
+#	<%= comment %>
+#
+<% end -%>
+<%= name %>	<%= interface %>		<%= broadcast %>		physical=<%= physical %><% if options != [] %><% options.sort.each do |value| %>,<%= value %><% end %><% end %>
+

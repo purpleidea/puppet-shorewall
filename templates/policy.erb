@@ -1,0 +1,14 @@
+###############################################################################
+#SOURCE	DEST	POLICY		LOG	LIMIT:BURST	CONNLIMIT:MASK
+#				LEVEL
+<% if comment != '' -%>
+#
+#	<%= comment %>
+#
+<% end -%>
+<% fixed_source_array.each do |x| -%>
+<% fixed_dest_array.each do |y| -%>
+<%= x %>	<%= y %>	<%= valid_policy %><% if valid_loglevel != '' %>	<%= valid_loglevel %><% end %>
+<% end -%>
+<% end -%>
+#LAST LINE -- DO NOT REMOVE

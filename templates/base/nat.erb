@@ -1,0 +1,18 @@
+#
+# Shorewall version 4 - Nat File
+#
+# For information about entries in this file, type "man shorewall-nat"
+#
+# For additional information, see http://shorewall.net/NAT.htm
+#
+###############################################################################
+#EXTERNAL	INTERFACE	INTERNAL	ALL		LOCAL
+#						INTERFACES
+
+# XXX: include this part if any shorewall::nat() defines are used
+#
+#	Include any rules in rules.d/ Don't let this return false.
+#
+SHELL cat /etc/shorewall/nat.d/*.nat 2> /dev/null || true
+
+#LAST LINE -- ADD YOUR ENTRIES BEFORE THIS ONE -- DO NOT REMOVE

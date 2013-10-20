@@ -1,0 +1,23 @@
+#
+# Shorewall version 4 - Rules File
+#
+# For information on the settings in this file, type "man shorewall-rules"
+#
+# The manpage is also online at
+# http://www.shorewall.net/manpages/shorewall-rules.html
+#
+####################################################################################################################################################################
+#ACTION		SOURCE		DEST		PROTO	DEST	SOURCE		ORIGINAL	RATE		USER/	MARK	CONNLIMIT	TIME         HEADERS
+#							PORT	PORT(S)		DEST		LIMIT		GROUP
+#SECTION ESTABLISHED
+#SECTION RELATED
+#SECTION NEW
+
+# XXX: include this part if any shorewall::rule() defines are used
+# XXX: we could use a fact to do that... !
+#
+#	Include any rules in rules.d/ Don't let this return false.
+#
+SHELL cat /etc/shorewall/rules.d/*.rule 2> /dev/null || true
+
+#LAST LINE -- ADD YOUR ENTRIES BEFORE THIS ONE -- DO NOT REMOVE
