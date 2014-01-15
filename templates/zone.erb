@@ -1,10 +1,10 @@
 ###############################################################################
 #ZONE	TYPE		OPTIONS		IN			OUT
 #					OPTIONS			OPTIONS
-<% if comment != '' -%>
+<% if @comment != '' -%>
 #
-#	<%= comment %>
+#	<%= @comment %>
 #
 <% end -%>
-<%= name %>	<%= valid_type %><% if options != [] %>	<%= options.sort.join(',') %><% end %>
+<%= @name %>	<%= @valid_type %><% if @options != [] %>	<%= @options.sort.join(',') %><% end %>
 #LAST LINE - ADD YOUR ENTRIES ABOVE THIS ONE - DO NOT REMOVE

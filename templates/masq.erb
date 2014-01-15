@@ -1,10 +1,10 @@
 ###############################################################################
 #INTERFACE:DEST		SOURCE			ADDRESS		PROTO	PORT(S)	IPSEC	MARK	USER/
 #												GROUP
-<% if comment != '' -%>
+<% if @comment != '' -%>
 #
-#	<%= comment %>
+#	<%= @comment %>
 #
 <% end -%>
-<%= interface %><% if digit != '' %>:<%= digit %><% end %>		<%= source.join(',') %>	<% if address != '' %><%= address %><% end %>
+<%= @interface %><% if @digit != '' %>:<%= @digit %><% end %>		<%= @source.join(',') %>	<% if @address != '' %><%= @address %><% end %>
 #LAST LINE -- ADD YOUR ENTRIES ABOVE THIS LINE -- DO NOT REMOVE

@@ -330,7 +330,7 @@ define shorewall::policy(
 		$fixed_dest_array = $dest_array
 	}
 
-	$valid_policy = inline_template('<%= policy.upcase %>') ? {
+	$valid_policy = inline_template('<%= @policy.upcase %>') ? {
 		'ACCEPT' => 'ACCEPT',
 		'DROP' => 'DROP',
 		'REJECT' => 'REJECT',
@@ -343,7 +343,7 @@ define shorewall::policy(
 		default => 'REJECT',
 	}
 
-	$valid_loglevel = inline_template('<%= logging.downcase %>') ? {
+	$valid_loglevel = inline_template('<%= @logging.downcase %>') ? {
 		# FIXME: add more log levels here
 		'info' => 'info',
 		default => $logging,	# TODO: do we allow custom logging ???
@@ -632,7 +632,7 @@ define shorewall::rule(
 		$list = ["${valid_action}", "${full_source}", "${full_dest}", "${valid_proto}", "${valid_port}", "${valid_sport}", "${valid_original}"]
 		$full = delete($list, '')	# remove empty entries!
 		# now pop continuously from the right all sequential - (dash) elements!
-		$done = split(inline_template("<%= while full[-1] == '-'; full.pop(); end; full.join('#') %>"), '#')
+		$done = split(inline_template("<%= while @full[-1] == '-'; @full.pop(); end; @full.join('#') %>"), '#')
 		$valid_rule = join($done, "\t")
 	}
 
