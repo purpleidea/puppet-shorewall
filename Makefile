@@ -25,8 +25,8 @@ SPEC = rpmbuild/SPECS/puppet-shorewall.spec
 SOURCE = rpmbuild/SOURCES/puppet-shorewall-$(VERSION).tar.bz2
 SRPM = rpmbuild/SRPMS/puppet-shorewall-$(VERSION)-$(RELEASE).src.rpm
 RPM = rpmbuild/RPMS/puppet-shorewall-$(VERSION)-$(RELEASE).rpm
-SERVER = 'download.gluster.org'
-REMOTE_PATH = 'purpleidea/puppet-shorewall'
+SERVER = 'dl.fedoraproject.org'
+REMOTE_PATH = 'pub/puppet-shorewall'
 
 all: docs rpm
 
